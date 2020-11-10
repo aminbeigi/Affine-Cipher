@@ -2,10 +2,11 @@ import unittest
 import affine_cipher as ac
 
 class TestStringMethods(unittest.TestCase):
+    # testing for "hello, world!"
 
     def test_numbers(self):
-        self.assertEqual(ac.affine_cipher(19, 11), 'UTS')
-        self.assertEqual(ac.affine_cipher(0, 0), 'ZZZ')
+        self.assertEqual(ac.affine_cipher(19, 11), 'UPSSX, TXSCW!')
+        self.assertEqual(ac.affine_cipher(0, 0), 'ZZZZZ, ZZZZZ!')
 
     def test_letters(self):
         with self.assertRaises(TypeError):
