@@ -13,7 +13,7 @@
 </p>
 
 ## Description
-Affine-Cipher will encrypt a selected file given two keys (alpha and beta) and write the generated output into a new file.
+Affine-Cipher will encrypt a selected file given two keys (inverse alpha and beta) and write the generated output into a new file.
 
 ## Requirements
 * Python 3.8.2
