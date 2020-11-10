@@ -13,7 +13,7 @@
 </p>
 
 ## Description
-Caesar-Cipher encrypts the characters of a selected file and writes the output into a new file using Caesar Cipher encryption.  
+Affine-Cipher will encrypt a selected file given two keys (alpha and beta) and write the generated output into a new file.
 
 ## Requirements
 * Python 3.8.2
