@@ -1,1 +1,2 @@
-EZCCH, DHMCG!
+inverse alpha = 19, beta = 5
+EZCCH, DHMCG! 
