@@ -133,4 +133,4 @@ src/tempCodeRunnerFile.py
 
 # ignore local files
 src/encrypted_file.txt
-src/test_text.txt
+src/test.txt
