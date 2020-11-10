@@ -23,9 +23,22 @@ def affine_cipher(inverse_alpha, beta):
                         f2.write(c)
 
 def main():
-    print("Affine cypher: f(x) = [inverse_alpha*(x - beta)]mod26")
-    inverse_alpha  = int(input("Enter a value for inverse alpha: "))
-    beta = int(input("Enter a value for beta: "))
+    print("Affine Cipher: f(x) = [inverse_alpha*(x - beta)]mod26")
+
+    while True:
+        try:
+            inverse_alpha = int(input("Enter a value for inverse alpha: "))
+            break
+        except ValueError:
+            print("incorrect input")
+        
+    while True:
+        try:
+            beta = int(input("Enter a value for beta: "))
+            break
+        except ValueError:
+            print("incorrect input")
+
     affine_cipher(inverse_alpha, beta)
 
 if __name__ == '__main__':
