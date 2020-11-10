@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 UTS
+=======
+inverse alpha = 19, beta = 5
+EZCCH, DHMCG! 
+>>>>>>> aa3c6f15b2e5a13181e8c80325b49944133d32b2
