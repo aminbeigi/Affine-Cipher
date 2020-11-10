@@ -13,28 +13,20 @@ alpha_dict = {'A' : 1, 'B' : 2, 'C' : 3, 'D' : 4, 'E' : 5, 'F' : 6,
 
 upper_alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-
-def affine_cipher(alpha, beta):
+def affine_cipher(inverse_alpha, beta):
     with open(FILE_PATH, 'r') as f1:
             with open('encrypted_file.txt', 'w') as f2:
                 for c in f1.read():
                     if (c.upper() in alpha_dict.keys()):
-                        f2.write(upper_alphabet[((alpha*alpha_dict[c.upper()] + beta) % 26)])
-                        print((alpha*alpha_dict[c.upper()] + beta) % 26)
+                        f2.write(upper_alphabet[(inverse_alpha*(alpha_dict[c.upper()] - beta) % 26) - 1])
                     else:
                         f2.write(c)
 
-    
-
-
-
 def main():
-    print("Affine cypher: f(x) = [alpha*x + beta]mod26")
-    alpha = int(input("Enter a value for alpha: "))
+    print("Affine cypher: f(x) = [inverse_alpha*(x - beta)]mod26")
+    inverse_alpha  = int(input("Enter a value for inverse alpha: "))
     beta = int(input("Enter a value for beta: "))
-    affine_cipher(alpha, beta)
-
-    print(((alpha*3 + beta) % 26))
+    affine_cipher(inverse_alpha, beta)
 
 if __name__ == '__main__':
     main()
